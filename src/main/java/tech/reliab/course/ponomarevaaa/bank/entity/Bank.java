@@ -1,5 +1,8 @@
 package tech.reliab.course.ponomarevaaa.bank.entity;
 
+import lombok.Data;
+
+@Data
 public class Bank {
 
     private Long id;

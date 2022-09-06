@@ -1,5 +1,10 @@
 package tech.reliab.course.ponomarevaaa.bank.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
 public class BankOffice {
 
     private Long id;

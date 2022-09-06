@@ -2,21 +2,22 @@ package tech.reliab.course.ponomarevaaa.bank.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.Date;
-import java.util.List;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
     private Long id;
     private String fullName;
-    private Date dateOfBirth; //Дата рождения
+    private LocalDate dateOfBirth; //Дата рождения
     private String placeOfWork; //Место работы
-    private Double monthlyIncome; //Ежемесячный доход
+    private Integer salary; //Ежемесячный доход
     private Bank bank; //Банки, которыми он пользуется
     private CreditAccount creditAccount; //Кредитные счета
     private PaymentAccount paymentAccount; //Платежные счета
-    private Long ratingForBank; //Кредитный рейтинг для банка
+    private Integer ratingForBank; //Кредитный рейтинг для банка
 }

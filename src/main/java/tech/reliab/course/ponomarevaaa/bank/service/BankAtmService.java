@@ -2,7 +2,7 @@ package tech.reliab.course.ponomarevaaa.bank.service;
 
 import tech.reliab.course.ponomarevaaa.bank.entity.BankAtm;
 
-public interface AtmService {
+public interface BankAtmService {
 
     BankAtm get();
 

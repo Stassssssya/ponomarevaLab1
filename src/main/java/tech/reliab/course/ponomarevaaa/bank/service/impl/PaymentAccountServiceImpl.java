@@ -32,7 +32,7 @@ public class PaymentAccountServiceImpl implements PaymentAccountService {
     @Override
     public void update(PaymentAccount paymentAccount) {
         this.paymentAccount.setUser(paymentAccount.getUser());
-        this.paymentAccount.setBank(paymentAccount.getBank());
+        this.paymentAccount.setBankName(paymentAccount.getBankName());
         this.paymentAccount.setAmount(paymentAccount.getAmount());
     }
 

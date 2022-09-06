@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
         this.user.setFullName(user.getFullName());
         this.user.setDateOfBirth(user.getDateOfBirth());
         this.user.setPlaceOfWork(user.getPlaceOfWork());
-        this.user.setMonthlyIncome(user.getMonthlyIncome());
+        this.user.setSalary(user.getSalary());
         this.user.setBank(user.getBank());
         this.user.setCreditAccount(user.getCreditAccount());
         this.user.setPaymentAccount(user.getPaymentAccount());

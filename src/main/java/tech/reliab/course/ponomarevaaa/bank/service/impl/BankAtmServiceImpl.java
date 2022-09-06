@@ -1,9 +1,9 @@
 package tech.reliab.course.ponomarevaaa.bank.service.impl;
 
 import tech.reliab.course.ponomarevaaa.bank.entity.BankAtm;
-import tech.reliab.course.ponomarevaaa.bank.service.AtmService;
+import tech.reliab.course.ponomarevaaa.bank.service.BankAtmService;
 
-public class AtmServiceImpl implements AtmService {
+public class BankAtmServiceImpl implements BankAtmService {
 
     private BankAtm bankAtm;
 

@@ -3,6 +3,8 @@ package tech.reliab.course.ponomarevaaa.bank;
 import tech.reliab.course.ponomarevaaa.bank.entity.*;
 import tech.reliab.course.ponomarevaaa.bank.enums.BanKOfficeStatusEnum;
 import tech.reliab.course.ponomarevaaa.bank.enums.BankAtmStatusEnum;
+import tech.reliab.course.ponomarevaaa.bank.service.BankService;
+import tech.reliab.course.ponomarevaaa.bank.service.impl.BankServiceImpl;
 
 import java.time.LocalDate;
 import java.util.Random;
@@ -11,12 +13,21 @@ public class Main {
 
     public static void main(String[] args) {
         Bank bank = createBank();
+        BankService bankService = new BankServiceImpl();
         BankOffice bankOffice = createBankOffice(bank);
         Employee employee = createEmployee(bank, bankOffice);
         BankAtm bankAtm = createBankAtm(bank, bankOffice, employee);
         User user = createUser(bank);
         PaymentAccount paymentAccount = createPaymentAccount(bank, user);
         CreditAccount creditAccount = createCreditAccount(bank, employee, user);
+
+        bankService.add(bank);
+        System.out.println("Банк добавлен: " + bankService.get());
+        bank.setName("Тинёк");
+        bankService.update(bank);
+        System.out.println("Название банка обновлено: " + bankService.get());
+        bankService.delete();
+        System.out.println("Банк удалён: " + bankService.get() + "\n");
 
         System.out.println(bank);
         System.out.println(bankOffice);
